@@ -89,7 +89,7 @@ export const authHelpers = {
       const { data, error } = await auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/auth-callback`,
+          redirectTo: new URL('./auth-callback', window.location.href).href,
         },
       });
       if (error) throw error;
@@ -105,7 +105,7 @@ export const authHelpers = {
       const { data, error } = await auth.signInWithOAuth({
         provider: 'github',
         options: {
-          redirectTo: `${window.location.origin}/auth-callback`,
+          redirectTo: new URL('./auth-callback', window.location.href).href,
         },
       });
       if (error) throw error;
