@@ -8,7 +8,7 @@ export const GIC_CONFIG = {
     anonKey: import.meta?.env?.VITE_SUPABASE_ANON_KEY ?? "sb_publishable_JiDl4bwgM1-RhN8t9TRM-Q_qGF2lHMk",
   },
   auth: {
-    redirectAfterLogin: "/index.html",
+    redirectAfterLogin: "./index.html",
     rememberMeKey: "gic_remember",
   },
 };
